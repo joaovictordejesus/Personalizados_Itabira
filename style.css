@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; 
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color:  #00bfff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.logo img {
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+nav {
+    background-color: #00bfff;
+    padding: 5px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #c5f5ff;
+    color: white;
+}
+
+main {
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+main h2 {
+    color: #ffffff;
+    background-color:#00bfff;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    z-index: 1000;
+    padding: 5px 0;
+}
+
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.produto {
+    background-color: #ffffff; 
+    color: rgb(0, 0, 0); 
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #00bfff;
+    border-radius: 5px;
+    width: calc(30% - 20px); 
+    box-sizing: border-box;
+    text-align: center;
+    position: relative; 
+    overflow: hidden; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.produto img {
+    max-width: 70%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+    transition: transform 0.3s; 
+}
+
+.produto img:hover {
+    transform: scale(1.1); 
+}
+
+.produto .nome {
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.produto .descricao {
+    text-decoration: none;
+    margin: 3px 0;
+    opacity: 0; 
+    transition: opacity 0.3s; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: #004a99; 
+    color: white; 
+    padding: 5px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(70%); 
+}
+
+.produto:hover {
+    background-color: #004a99; 
+    color: white; 
+}
+
+.produto:hover .descricao {
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
+
+.slider {
+    width: 100%;
+    height: 700px; 
+    overflow: hidden;
+    position: relative;
+}
+
+.slider .slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 1s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.slider .slide:nth-child(1) {
+    opacity: 1;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+footer {
+    background-color: #00bfff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+footer .footer-content p {
+    margin: 5px 0;
+    color: #ffffff;
+}
